@@ -1,0 +1,9 @@
+-- cis7.sh Explanation --
+
+To avoid having to format homework each week, the script auto-formats ".txt" homework submission file so all student has to do is copy & paste program output into the file.
+
+We were required to have all homework source code & outputs in single ".txt" file. If the output was an image it was to be submitted separately. 
+
+For anyone that might use the script, please make it executable & and it to your PATH variable for ease of use. 
+
+Adios.
