@@ -1,0 +1,117 @@
+
+-- Question 3_4 Source Code --
+
+import math
+
+side = eval(input("Enter the side: "))
+
+area = (5 * pow(side,2)) / (4 * math.tan(math.pi / 5))
+
+print("The area of the pentagon is " + format(area,'<.2f'))
+
+-- Question 3_4 Output --
+Enter the side: 5.5
+The area of the pentagon is 52.04
+
+-- Question 3_6 Source Code --
+
+userVal = eval(input("Enter an ASCII code: "))
+
+asciiChar = chr(userVal)
+
+print("The character is",asciiChar)
+
+-- Question 3_6 Output --
+Enter an ASCII code: 69
+The character is E
+
+-- Question 3_9 Source Code --
+
+name = input("Enter employee's name: ")
+
+#User enters info about their pay
+hours = eval(input("Enter number of hours worked in a week: "))
+rate = eval(input("Enter hourly pay rate: $"))
+
+#User enters withholding rates
+federalRate = eval(input("Enter federal tax withholding rate: "))
+stateRate = eval(input("Enter state tax withholding rate: "))
+
+#Calculations
+gross = hours * rate
+
+federalWithholding = gross * federalRate
+stateWithholding = gross * stateRate
+totalDeductions = federalWithholding + stateWithholding
+
+net = gross - totalDeductions
+
+print("------------\nInfo:\n------------") 
+print("\tEmployee Name: " + name)
+print("\tHours Worked: " + format(hours, '.2f'))
+print("\tPay Rate: $" + format(rate, '.2f'))
+print("------------\nDeductions:\n------------\n\t" + 
+        "Federal Withholding (" + format(federalRate, '.2%') + "): $" + format(federalWithholding, '.2f') + "\n\t" +
+        "State Withholding (" + format(stateRate, '.2%') + "): $" + format(stateWithholding, '.2f') + "\n\t" +
+        "Total Deduction: $" + format(totalDeductions, '.2f'))
+print("------------\nPay Totals:\n------------") 
+print("\tGross Pay: $" + format(gross, '.2f'))
+print("\tNet Pay: $" + format(net, '.2f'))
+        
+
+
+-- Question 3_9 Output --
+Enter employee's name: Smith
+Enter number of hours worked in a week: 10
+Enter hourly pay rate: $9.75
+Enter federal tax withholding rate: .2
+Enter state tax withholding rate: .09
+------------
+Info:
+------------
+	Employee Name: Smith
+	Hours Worked: 10.00
+	Pay Rate: $9.75
+------------
+Deductions:
+------------
+	Federal Withholding (20.00%): $19.50
+	State Withholding (9.00%): $8.78
+	Total Deduction: $28.27
+------------
+Pay Totals:
+------------
+	Gross Pay: $97.50
+	Net Pay: $69.22
+
+-- Question 3_13 Source Code --
+
+import turtle
+
+turtle.showturtle()
+
+turtle.speed(1)
+turtle.pensize(3)
+turtle.penup()
+turtle.goto(100,0)
+turtle.pendown()
+turtle.begin_fill()
+turtle.color("red")
+turtle.setheading(90)
+turtle.circle(100, steps = 6)
+turtle.end_fill()
+
+turtle.color("white")
+turtle.penup()
+turtle.goto(50-50,-50/2)
+turtle.pendown()
+turtle.write("STOP",
+        font = ("Times", 50, "bold"),
+        align = "center")
+turtle.hideturtle()
+
+turtle.done()
+
+-- Question 3_13 Output --
+
+See separately attached image

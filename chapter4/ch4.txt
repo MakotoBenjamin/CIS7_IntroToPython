@@ -1,0 +1,134 @@
+
+-- Question 4_7 Source Code --
+
+# Receive the amount
+amount = eval(input("Enter an amount, for example, 11.56: "))
+
+# Convert the amount to cents
+remainingAmount = int(amount * 100)
+
+# Find the number of one dollars
+numberOfOneDollars = remainingAmount // 100
+remainingAmount = remainingAmount % 100
+
+# Find the number of quarters in the remaining amount
+numberOfQuarters = remainingAmount // 25
+remainingAmount = remainingAmount % 25
+
+# Find the number of dimes in the remaining amount
+numberOfDimes = remainingAmount // 10
+remainingAmount = remainingAmount % 10
+
+# Find the number of nickels in the remaining amount
+numberOfNickels = remainingAmount // 5
+remainingAmount = remainingAmount % 5
+
+# Find the number of pennies in the remaining amount
+numberOfPennies = remainingAmount
+
+# Display the results
+print("Your amount", amount, "consists of")
+if numberOfOneDollars > 0:
+    print("\t", numberOfOneDollars, "dollars") if numberOfOneDollars>1 else print("\t", numberOfOneDollars, "dollar")
+if numberOfQuarters > 0:
+    print("\t", numberOfQuarters, "quarters") if numberOfQuarters>1 else print("\t", numberOfQuarters, "quarter")
+if numberOfDimes > 0:
+    print("\t", numberOfDimes, "dimes") if numberOfDimes>1 else print("\t", numberOfDimes, "dime")
+if numberOfNickels > 0:
+    print("\t", numberOfNickels, "nickels") if numberOfNickels>1 else print("\t", numberOfNickels, "nickel")
+if numberOfPennies > 0:
+    print("\t", numberOfpennies, "pennies") if numberOfPennies>1 else print("\t", numberOfPennies, "penny")
+
+-- Question 4_7 Output --
+Enter an amount, for example, 11.56: 11.56
+Your amount 11.56 consists of
+	 11 dollars
+	 2 quarters
+	 1 nickel
+	 1 penny
+
+-- Question 4_11 Source Code --
+
+import calendar
+
+month = eval(input("Enter a month: "))
+year = eval(input("Enter a year: "))
+
+if month > 12:
+    print("!INVALID ENTRY!\n--- Exiting Program ---")
+elif month == 2:
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        print(calendar.month_name[month], year, "has 29 days.")
+    else:
+        print(calendar.month_name[month], year, "has 28 days.")
+elif (month == 4 or month == 6 or month == 9 or month == 11):
+    print(calendar.month_name[month], year, "has 30 days.")
+else:
+    print(calendar.month_name[month], year, "has 31 days.")
+
+-- Question 4_11 Output --
+Enter a month: 2
+Enter a year: 2000
+February 2000 has 29 days.
+
+-- Question 4_12 Source Code --
+
+number = eval(input("Enter an integer: "))
+
+print("Is " + str(number) + " divisible by 5 and 6?", (number % 5 == 0 and number % 6 == 0))
+
+print("Is " + str(number) + " divisible by 5 or 6?", (number % 5 == 0 or number % 6 == 0))
+
+print("Is " + str(number) + " divisible by 5 or 6, but not both?", (number % 5 == 0 or number % 6 == 0) and not(number % 5 == 0 and number % 6 == 0)) 
+
+-- Question 4_12 Output --
+Enter an integer: 10
+Is 10 divisible by 5 and 6? False
+Is 10 divisible by 5 or 6? True
+Is 10 divisible by 5 or 6, but not both? True
+
+-- Question 4_17 Source Code --
+
+import random
+
+userNum = eval(input("scissor (0), rock (1), paper (2): "))
+
+compNum = random.randint(0,2)
+
+userHand = "null"
+compHand = "null"
+
+#Assigning string value based on number user inputs
+if userNum > 2:
+    print("!Invalid entry!\n---Exiting Program---")
+    quit()
+elif userNum == 0:
+    userHand = "scissor"
+elif userNum == 1:
+    userHand = "rock"
+else:
+    userHand = "paper"
+
+#Assigning string value based on number generated for computer
+if compNum == 0:
+    compHand = "scissor"
+elif compNum == 1:
+    compHand = "rock"
+else:
+    compHand = "paper"
+
+if userNum == compNum:
+    print("The computer is " + compHand + ". You are " + userHand + ". It is a draw.")
+elif (userNum == 0 and compNum == 2) or (userNum == 1 and compNum == 0) or (userNum == 2 and compNum == 1):
+    print("The computer is " + compHand + ". You are " + userHand + ". You won.")
+else:
+    print("The computer is " + compHand + ". You are " + userHand + ". You lose.")
+
+-- Question 4_17 Output --
+❯ python3 4_17.py
+scissor (0), rock (1), paper (2): 1
+The computer is rock. You are rock. It is a draw
+
+❯ python3 4_17.py
+scissor (0), rock (1), paper (2): 2
+The computer is rock. You are paper. You won.

@@ -1,0 +1,57 @@
+
+-- Question 1_4 Source Code --
+
+print("a\t a^2\t a^3")
+val1 = 1
+val2 = 2
+val3 = 3
+val4 = 4
+print(val1,"\t",val1**2,"\t",val1**3)
+print(val2,"\t",val2**2,"\t",val2**3)
+print(val3,"\t",val3**2,"\t",val3**3)
+print(val4,"\t",val4**2,"\t",val4**3)
+
+-- Question 1_4 Output --
+
+a	 a^2	 a^3
+1 	 1 	 1
+2 	 4 	 8
+3 	 9 	 27
+4 	 16 	 64
+
+-- Question 1_9 Source Code --
+
+width = 4.5
+height = 7.9
+area = round(width * height,2)
+
+print(area)
+
+-- Question 1_9 Output --
+
+35.55
+
+-- Question 1_15 Source Code --
+
+from turtle import *
+import turtle
+
+turtle.showturtle()
+
+turtle.right(60)
+turtle.forward(100)
+turtle.right(120)
+turtle.forward(100)
+turtle.right(120)
+turtle.forward(200)
+
+turtle.left(120)
+turtle.forward(100)
+turtle.left(120)
+turtle.forward(100)
+
+turtle.done()
+
+-- Question 1_15 Output --
+
+See separately attached image

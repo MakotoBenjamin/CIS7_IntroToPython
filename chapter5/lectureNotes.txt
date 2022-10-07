@@ -1,0 +1,31 @@
+Chapter 5 Notes:
+
+3 types of "while" loops learned
+
+1. Counter controlled
+2. Sentinel Controlled
+3. Condition Controlled
+
+Counter --> Assign a variable a number and count until that number has been reached
+
+Sentinel --> Have a termination value and continue looping until it's entered
+
+Condition --> Continue to loop until specific condition is met
+
+For Loops:
+
+- better/cleaner way of using counter controlled loops
+- while loop requires counter variable to be initialized, then a condition to be met, and a loop body separated into 3 parts
+- "for" loop combines all 3 into one statement
+
+For Loop Shorthand:
+
+- if your value starts at 0, then you do not have to include an initial value
+    eg: for i in range(4) --> goes from 0 - 4 and increments by 1 each loop
+
+For Loop Adjusting Increment:
+
+- eg: for i in range(5,1,-1) --> decrement by 1 until 1 is reached (excludes 1)
+- eg: for i in range(3,13, 2) --> increment by 2
+
+

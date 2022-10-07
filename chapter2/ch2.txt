@@ -1,0 +1,65 @@
+
+-- Question 2_5 Source Code --
+
+subtotal, rate = eval(input("Enter the subtotal and a gratuity rate separated by a comma: "))
+
+gratuity = round(subtotal * (rate / 100),2)
+total = subtotal + gratuity
+
+print("The gratuity is ", gratuity, " and the total is ", total)
+
+-- Question 2_5 Output --
+Enter the subtotal and a gratuity rate separated by a comma: 10, 15
+The gratuity is  1.5  and the total is  11.5
+
+-- Question 2_13 Source Code --
+
+userNum = eval(input("Please enter a 4 digit number: "))
+
+num1 = userNum // 1000
+num2 = (userNum // 100) % 10
+num3 = (userNum // 10) % 10
+num4 = userNum % 10
+
+print(num1)
+print(num2)
+print(num3)
+print(num4)
+
+-- Question 2_13 Output --
+Please enter a 4 digit number: 3125
+3
+1
+2
+5
+
+-- Question 2_15 Source Code --
+
+side = eval(input("Enter the side length of a hexagon: "))
+
+area = round( 3 *  3 ** ( 1 / 2 ) / 2  * side ** 2, 4 )
+
+print("The area of the hexagon is: ", area)
+
+-- Question 2_15 Output --
+Enter the side length of a hexagon: 5.5
+The area of the hexagon is:  78.5918
+
+-- Question 2_19 Source Code --
+
+investment = eval(input("Enter investment amount: $"))
+annualRate = eval(input("Enter annual interest rate: "))
+years = eval(input("Enter number of years: "))
+
+monthlyRate = annualRate / 1200
+numMonths = years *  12
+
+futureValue = round(investment * ( 1 + monthlyRate ) ** numMonths, 2)
+
+print("Accumulated value is: $", futureValue)
+
+-- Question 2_19 Output --
+Enter investment amount: $1000
+Enter annual interest rate: 4.25
+Enter number of years: 1
+Accumulated value is: $ 1043.34
