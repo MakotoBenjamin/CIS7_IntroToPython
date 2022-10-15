@@ -1,0 +1,132 @@
+---- Lecture 1: ----
+
+Functions
+
+* Modular code helps with organization, reducing complexity, and the ability to hide implementation
+
+Function Definition: collection of statements grouped together to perform an operation
+
+Basic structure of a function:
+
+def functionName(parameters):
+    statements
+
+    return variableToReturn
+
+eg:
+
+#creating "larger" function
+#function need a header, header begins with "def" keyword
+def larger(n1, n2):
+    if n1 > n2:
+        result = n1
+    else:
+        result = n2
+    return result
+
+def main():
+    #taking user input for initial values
+    i,j = eval(input("Enter two numbers separated by comma: "))
+    #calling larger() function, variable k is assigned output from "larger()" function
+    #variables passed into "larger()" within main() are called arguments. 
+    k = larger(i, j)
+    print("The maximum between", i,"and", j,"is", k)
+
+#calling main function, if you don't call main() nothing will happen since --> no code for system to run
+main()
+
+Call Stacks:
+
+* system remembers where function was called and returns to that point after it runs the function
+
+* system keeps track of calling sequence by using "call stacks"
+
+* simple terms: stack of dishes --> first function call goes to bottom, second would go ontop of first function --> function that was called last needs to finish before you can come back/complete the initial call request.
+
+* "first in last out" or "last in, first out"
+
+---- Lecture 2 ----
+
+* not all functions have a return value
+
+* functions that have no return value are called "void" functions in other languages 
+    - in python, when there is no return value --> you have a "none" value
+
+Arguments:
+
+* unless specified arguments have to be passed in exact order of parameters
+
+* can specify parameter value 
+    eg: nPrintln(n = 4, message = "Computer Science")
+
+Variable Scope:
+
+* local variables only accessible within function
+
+* global variables defined outside of function can be accessed anywhere in the program (within function & outside of function)
+
+eg:
+
+sum = 0
+for i in range(0, 5):
+    sum += i
+
+print (i) # displays 4
+
+# the variable i would be considered a global variable --> can be accessed from anywhere in the program
+
+eg:
+
+x = eval(input("Enter a number: "))
+if (x>0):
+    y=4
+print(y) # This gives an error if y is not created
+
+# in the above example both x & y are global variables because neither is within a function
+
+---- Lecture 3 ----
+
+Default Values:
+
+* if a function has parameters, it will throw a run-time error if it does not receive arguments
+    - use default arguments/values to avoid this issue
+
+invalid eg:
+
+def printArea(width, height):
+    area = width * height
+    print("width:", width, "\theight:", height, "\tarea:", area)
+
+    printArea()
+
+* this throws a runtime error because calling printArea() should have arguments
+
+valid eg:
+
+def printArea(width = 1, height = 0):
+    area = width * height
+    print("width:", width, "\theight:", height, "\tarea:", area)
+
+    printArea()
+
+* the above example will run as expected when printArea() is called because it is being passed default values in the function definition
+
+Return Multiple Values:
+
+* because multiple assignment is allowed, multiple values can also be returned
+
+eg:
+
+sort(number1, number2):
+    if number1 < number2:
+        return number1, number2
+    else:
+        return number2, number1
+
+n1, n2 = sort(3, 2)
+
+print("n1 is", n1)
+print("n2 is", n2)
+
+
+
