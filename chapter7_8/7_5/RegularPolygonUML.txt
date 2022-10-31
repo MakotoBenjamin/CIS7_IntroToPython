@@ -1,0 +1,25 @@
+---------------------------------------------
+RegularPolygon
+---------------------------------------------
+-n:int
+-s:float
+-x:float
+-y:float
+---------------------------------------------
+import math
+
+RegularPolygon(n:int, s:float, x:float, y:float)
+
+setN(n:int):none
+setS(s:float):none
+setX(x:float):none
+setY(y:float):none
+
+getN():int
+getS():float
+getX():float
+getY():float
+
+getperimeter():float
+getArea():float
+---------------------------------------------

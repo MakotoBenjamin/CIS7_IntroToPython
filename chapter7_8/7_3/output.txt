@@ -1,0 +1,11 @@
+You withdrew $2500.00.
+You now have $17500.00 remaining in your account.
+You deposited $3000.
+You now have $20500 in your account.
+
+-----------------------
+
+ID: 1122
+Balance: 20500.00
+Monthly Interest Rate: 0.003750
+Monthly Interest: 76.88

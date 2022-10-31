@@ -1,0 +1,3 @@
+Polygon 1 | Perimeter: 3.00 | Area: 0.43
+Polygon 2 | Perimeter: 24.00 | Area: 41.57
+Polygon 3 | Perimeter: 40.00 | Area: 123.11

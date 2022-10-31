@@ -1,0 +1,22 @@
+-------------------------------------------------------------------
+Account
+-------------------------------------------------------------------
+-id:int
+-balance:float
+-annualInterestRate:float
+-------------------------------------------------------------------
+Account(id:int, balance:float, annualInterestRate:float)
+
+setId(id:int):none
+setBalance(balance:float):none
+setAnnualInterestRate(annualInterestRate:float):none
+
+getId():int
+getBalance():float
+getAnnualInterestRate():float
+
+getMonthlyInterestRate():float
+getMonthlyInterest():float
+withdraw(withdrawalAmount:float):none
+deposit(depositAmount:float):none
+-------------------------------------------------------------------
