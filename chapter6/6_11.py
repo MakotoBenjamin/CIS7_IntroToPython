@@ -1,5 +1,5 @@
 def computeCommission(salesAmount):
-    
+    """    
     commission = 0.00
     
     if salesAmount >= .01 and salesAmount <= 5000:
@@ -13,7 +13,16 @@ def computeCommission(salesAmount):
 
     else:
         print("Invalid Entry")
-    
+
+    """
+
+    if salesAmount >= 10000.01:
+        commission = 5000 * 0.08 + 5000 * 0.1 + (salesAmount - 10000) * 0.12
+    elif salesAmount >= 5000.01:
+        commission = 5000 * 0.08 + (salesAmount - 5000) * 0.10
+    else:
+        commission = salesAmount * 0.08
+
     return commission
 
     
